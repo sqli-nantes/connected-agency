@@ -1,16 +1,27 @@
 import paho.mqtt.client as paho
 import time
+import datetime
 import serial
 ser = serial.Serial('/dev/ttyACM0', 9600)
 
 def on_publish(client, userdata, mid):
     print("")
+    
+    
 
 client = paho.Client()
 client.on_publish = on_publish
-client.connect("10.33.44.228", 1883)
+client.connect("10.33.44.152", 1883)
 client.loop_start()
 
 while True:
+	liste = []
+	now = datetime.datetime.now() 
+   	timestamp = time.mktime(now.timetuple())    
 	decibel = ser.readline()
-	(rc, mid) = client.publish("decibelometre", str(decibel), qos = 1)
+	regex = re.compile(r'[\n\r\t]')
+	db = regex.sub(" ", decibel )
+	liste.append(db)
+	liste.append(timestamp)
+	print(db)
+	(rc, mid) = client.publish("decibelometre", str(liste), qos = 1)

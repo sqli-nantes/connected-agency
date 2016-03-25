@@ -18,17 +18,12 @@ void loop()
   if (vw_get_message(buf, &buflen)) // Non-blocking
   {
     int i;
-
     digitalWrite(13, true); // Flash a light to show received good message
-    // Message with a good checksum received, dump it.
-    Serial.print("");
-
+    
     for (i = 0; i < buflen; i++)
     {
       Serial.write(buf[i]);
-      //Serial.print(" ");
     }
-    Serial.println("");
     digitalWrite(13, false);
   }
 }
