@@ -16,22 +16,22 @@ Matériel :
  * Recepteur Radio RF433Mhz : XY-MK-5V
  * Capteur son : Arduino KY-038 Microphone sound sensor module
 
-![capteurs][/doc/rf433.jpg]
+![capteurs][doc/rf433.jpg]
 
 ## Emetteur
 Schéma de cablage :
-![schéma][/doc/emetteur.png]
+![schéma][doc/emetteur.png]
 
  Pour l'installation du Sketch, il faut installer la librairie VirtualWire
  https://www.pjrc.com/teensy/td_libs_VirtualWire.html
 
-Le code source est [disponible ici](/decibelmettre/emetteur.ino).
+Le code source est [disponible ici](decibelmettre/emetteur.ino).
 
 ## Recepteur
 Schéma de cablage
-![schéma][/doc/recepteur.png]
+![schéma][doc/recepteur.png]
 
-Le code source est [disponible ici](/decibelmettre/recepteur.ino).
+Le code source est [disponible ici](decibelmettre/recepteur.ino).
 
 # Afficheur LCD
 Le rôle de l'afficheur LCD est d'afficher l'adresse IP du système. L'objectif est avant tout de faciliter l'expérience utilisateur : celui-ci n'a pas à se connecter à un écran, ni même lancer les commandes réseaux (type nmap) pour récupérer l'IP du Raspberry PI.
@@ -40,7 +40,7 @@ On s'appuie sur un écran LCD 16x2.
 
 Il est connecté directement sur le Raspberry PI par le GPIO. Le potentiometre permet de régler la luminosité de l'écran.
 
-![schéma][/doc/diagramme_Rpi_LCD.png]
+![schéma][doc/diagramme_Rpi_LCD.png]
 
 # Raspberry PI
 Le raspberry PI est conencté au récepteur par port série via USB. Il récupère l'information du récepteur, puis envoie les informations à un broker MQTT.
