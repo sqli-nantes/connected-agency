@@ -1,7 +1,7 @@
 
-# Explications du décibelmetre connecté
+# Agence Connectée
 
-Il est composé de 3 parties :
+Le projet est composé de 3 parties :
 
  * Le capteur de son. Il capte le bruit ambiant et calcule les décibels. L'information est ensuite émise par un signal radio 433Mhz.
  * Le récepteur radio capte les signaux envoyés par l'émetteur decibelmètre. Il transmet ensuite les informations au Raspbery PI par le port série (via USB).
