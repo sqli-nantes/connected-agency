@@ -16,11 +16,11 @@ Matériel :
  * Recepteur Radio RF433Mhz : XY-MK-5V
  * Capteur son : Arduino KY-038 Microphone sound sensor module
 
-![capteurs][doc/rf433.jpg]
+![capteurs](doc/rf433.jpg)
 
 ## Emetteur
 Schéma de cablage :
-![schéma][doc/emetteur.png]
+![schéma](doc/emetteur.png)
 
  Pour l'installation du Sketch, il faut installer la librairie VirtualWire
  https://www.pjrc.com/teensy/td_libs_VirtualWire.html
@@ -29,7 +29,7 @@ Le code source est [disponible ici](decibelmettre/emetteur.ino).
 
 ## Recepteur
 Schéma de cablage
-![schéma][doc/recepteur.png]
+![schéma](doc/recepteur.png)
 
 Le code source est [disponible ici](decibelmettre/recepteur.ino).
 
@@ -40,7 +40,7 @@ On s'appuie sur un écran LCD 16x2.
 
 Il est connecté directement sur le Raspberry PI par le GPIO. Le potentiometre permet de régler la luminosité de l'écran.
 
-![schéma][doc/diagramme_Rpi_LCD.png]
+![schéma](doc/lcd.png)
 
 # Raspberry PI
 Le raspberry PI est conencté au récepteur par port série via USB. Il récupère l'information du récepteur, puis envoie les informations à un broker MQTT.
@@ -147,13 +147,13 @@ Récupérer des informations complémentaires à pas cher :
 Raspberry Sense HAT permettrait d'implémenter la restitution sonore, mais également de récupérer la température dans la pièce, (la pression et l'humidité sont également possible)
 
 ## Miniaturisation
- Les modules fonctionnent encore en Arduino. L'idée serait de les miniaturiser via les ATTiny85
+Les modules fonctionnent encore en Arduino. L'idée serait de les miniaturiser via les ATTiny85
 
 ## Solidifier
 Il faudrait préférablement souder les composants et ne plus les avoir sous forme de breadboard.
 
 ## Autonomie
-* Pas d'alimentation autonome du module emetteur. Il serait intéressant de l'alimenter par batterie.
+Pas d'alimentation autonome du module emetteur. Il serait intéressant de l'alimenter par batterie.
 
 ## Sans fil
 Le Rpi est pour l'instant en RJ45. dès qu'il est allumé, il affiche son adresse IP. L'idée serait donc qu'il mettes à dispo un serveur Web de parametrage du Wifi et permet par la suite de se connecter via le WiFI via cette interface Web. S'inspirer des façons de faire des autres objets connectés (Nao, Nest, ChromeCast).
