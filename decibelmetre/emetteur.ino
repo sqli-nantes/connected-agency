@@ -41,13 +41,17 @@ void loop()      {
   double db =  20.0  * log10 (peakToPeak  + 1);
   /* Envoi au recepteur si décibel supérieur a 8 */
  if (db > 8) {
-    
+    // flash a light to show message is sent
+    digitalWrite(13, true);
+      
     itoa(db,nombre,10); // 10 car décimal
     strcpy (message, msg);
     strcat(message,nombre);
     vw_send((uint8_t *)message, strlen(message));
     Serial.println(message);
     vw_wait_tx();
+  
+    digitalWrite(13, false);
   }
 
  delay(100);

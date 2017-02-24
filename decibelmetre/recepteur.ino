@@ -23,6 +23,7 @@ void loop()
     for (i = 0; i < buflen; i++)
     {
       Serial.write(buf[i]);
+      Serial.write("\n");
     }
     digitalWrite(13, false);
   }
