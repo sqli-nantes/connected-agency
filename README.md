@@ -7,6 +7,8 @@ Le projet est composé de 3 parties :
  * Le récepteur radio capte les signaux envoyés par l'émetteur decibelmètre. Il transmet ensuite les informations au Raspbery PI par le port série (via USB).
  * Le Raspberry PI qui récupère ces informations et les transmet à un broker MQTT.
 
+ ![photo](doc/photo.jpg)
+
 # Capteur de son
 Matériel :
 
