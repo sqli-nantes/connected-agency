@@ -7,25 +7,22 @@ import serial
 import re
 ser = serial.Serial('/dev/ttyACM0', 9600)
 
-def on_publish(client, userdata, mid):
-    print("")
-    
-    
+def on_connect(client, userdata, flags, rc):
+    print("Connection returned result: "+ paho.connack_string(rc))
 
 client = paho.Client()
-client.on_publish = on_publish
-client.connect("52.4.159.135", 5672)
+client.username_pw_set("user", "password")
+client.on_connect = on_connect
+client.connect("127.0.0.1", 5672)
 client.loop_start()
 
-print("connected to MQTT broker")
 while True:
 	liste = []
-	now = datetime.datetime.now() 
-   	timestamp = time.mktime(now.timetuple())    
+	now = datetime.datetime.now()
+   	timestamp = time.mktime(now.timetuple())
 	decibel = ser.readline()
 	regex = re.compile(r'[\n\r\t]')
 	db = regex.sub(" ", decibel )
 	liste.append(db)
 	liste.append(timestamp)
-	# print(db)
 	(rc, mid) = client.publish("decibelometre", str(liste), qos = 1)
