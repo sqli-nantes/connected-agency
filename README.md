@@ -155,12 +155,6 @@ Raspberry Sense HAT permettrait d'implémenter la restitution sonore, mais égal
 ## Miniaturisation
 Les modules fonctionnent encore en Arduino. L'idée serait de les miniaturiser via les ATTiny85
 
-## Solidifier
-Il faudrait préférablement souder les composants et ne plus les avoir sous forme de breadboard.
-
-## Autonomie
-Pas d'alimentation autonome du module emetteur. Il serait intéressant de l'alimenter par batterie.
-
 ## Sans fil
 Le Rpi est pour l'instant en RJ45. dès qu'il est allumé, il affiche son adresse IP. L'idée serait donc qu'il mettes à dispo un serveur Web de parametrage du Wifi et permet par la suite de se connecter via le WiFI via cette interface Web. S'inspirer des façons de faire des autres objets connectés (Nao, Nest, ChromeCast).
 
