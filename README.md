@@ -7,7 +7,11 @@ Le projet est composé de 3 parties :
  * Le récepteur radio capte les signaux envoyés par l'émetteur decibelmètre. Il transmet ensuite les informations au Raspbery PI par le port série (via USB).
  * Le Raspberry PI qui récupère ces informations et les transmet à un broker MQTT.
 
+L'experimentation sur breadboard.
  ![photo](doc/photo.jpg)
+
+Le résultat final avec soudage et wire-wrapping.
+![photo](doc/photo_final.jpg)
 
 # Capteur de son
 Matériel :
@@ -27,13 +31,13 @@ Schéma de cablage :
  Pour l'installation du Sketch, il faut installer la librairie VirtualWire
  https://www.pjrc.com/teensy/td_libs_VirtualWire.html
 
-Le code source est [disponible ici](decibelmettre/emetteur.ino).
+Le code source est [disponible ici](decibelmetre/emetteur/emetteur.ino).
 
 ## Recepteur
 Schéma de cablage
 ![schéma](doc/recepteur.png)
 
-Le code source est [disponible ici](decibelmettre/recepteur.ino).
+Le code source est [disponible ici](decibelmetre/recepteur/recepteur.ino).
 
 # Afficheur LCD
 Le rôle de l'afficheur LCD est d'afficher l'adresse IP du système. L'objectif est avant tout de faciliter l'expérience utilisateur : celui-ci n'a pas à se connecter à un écran, ni même lancer les commandes réseaux (type nmap) pour récupérer l'IP du Raspberry PI.
